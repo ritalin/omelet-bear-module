@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=5.5.0",
-        "ritalin/omelet": "~0.1"
+        "ritalin/omelet": "0.1.0-alpha2"
     },
     "minimum-stability": "alpha",
     "autoload": {
