@@ -1,0 +1,22 @@
+{
+    "name": "ritalin/omelet-bear-module",
+    "description": "omelet module for BEAR.Sunday",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ritalin",
+            "homepage": "http://ritalin.github.io"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "ritalin/omelet": "~0.1"
+    },
+    "minimum-stability": "alpha",
+    "autoload": {
+        "psr-4": {
+            "Omelet\\": "src/"
+        }
+    }
+}
