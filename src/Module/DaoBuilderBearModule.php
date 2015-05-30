@@ -6,11 +6,12 @@ use Ray\Di\AbstractModule;
 use Ray\Di\Scope;
 use Ray\DbalModule\DbalModule;
 
+use Omelet\Builder\Configuration;
 use Omelet\Builder\DaoBuilderContext;
 
 class DaoBuilderBearModule extends AbstractModule {
     /**
-     * @var array
+     * @var Configuration
      */
     private $config;
     /**
@@ -18,7 +19,7 @@ class DaoBuilderBearModule extends AbstractModule {
      */
     private $interfaces;
     
-    public function __construct(array $config, array $interfaces)
+    public function __construct(Configuration $config, array $interfaces)
     {
         $this->config = $config;
         $this->interfaces = $interfaces;
