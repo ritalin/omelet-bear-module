@@ -41,6 +41,6 @@ class DaoBuilderBearModule extends AbstractModule {
             $this->bind($intf)->to($context->getDaoClassName($intf))->in(Scope::SINGLETON);
         }
 
-        $context->save();
+        $context->saveHistory();
     }
 }
