@@ -2,8 +2,11 @@
 
 namespace Omelet\Module;
 
+use Doctrine\DBAL\Driver\Connection;
+
 use Ray\Di\AbstractModule;
 use Ray\Di\Scope;
+use Ray\Di\Name;
 use Ray\DbalModule\DbalModule;
 
 use Omelet\Builder\Configuration;
@@ -34,6 +37,9 @@ class DaoBuilderBearModule extends AbstractModule {
         $this->bind(DaoBuilderContext::class)->toInstance($context);
         
         $this->install(new DbalModule($context->connectionString()));
+        
+        $this->getContainer()->move(Connection::class, Name::ANY, Connection::class, 'SqlLogger');
+        $this->bind(Connection::class)->toProvider(SqlLoggerProvider::class);
         
         foreach ($this->interfaces as $intf) {
             $context->build($intf);

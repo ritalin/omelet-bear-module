@@ -11,10 +11,9 @@
     ],
     "require": {
         "php": ">=5.5.0",
-        "ray/dbal-module": "dev-master",
+        "psr/log": "~1.0",
         "ritalin/omelet": "~0.3"
     },
-    "minimum-stability": "alpha",
     "autoload": {
         "psr-4": {
             "Omelet\\": "src/"
